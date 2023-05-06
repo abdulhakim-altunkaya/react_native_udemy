@@ -1,9 +1,9 @@
 import React from 'react';
 import { Text, View, StyleSheet} from 'react-native';
 
-function ImageDetail() {
+function ImageDetail({myTitle}) {
   return (
-    <Text style={styles.text}>ImageDetail</Text>
+    <Text style={styles.text}>ImageDetail {myTitle}</Text>
   )
 }
 

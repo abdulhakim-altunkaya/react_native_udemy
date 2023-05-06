@@ -5,11 +5,9 @@ import ImageDetail from '../components/ImageDetail';
 function ImageScreen() {
   return (
     <View>
+        <ImageDetail myTitle="Ich habe eine E-Mail erhalten" />
         <ImageDetail/>
-        <ImageDetail/>
-        <ImageDetail/>
-        <ImageDetail/>
-        <ImageDetail/>
+        <ImageDetail myTitle="Ich habe eine E-Mail geschickt"/>
         <ImageDetail/>
     </View>
   )
