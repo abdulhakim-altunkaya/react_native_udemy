@@ -1,15 +1,21 @@
 import React from 'react';
-import { Text, View, StyleSheet} from 'react-native';
+import { Text, View, StyleSheet, Image} from 'react-native';
 
-function ImageDetail({myTitle}) {
+function ImageDetail(props) {
   return (
-    <Text style={styles.text}>ImageDetail {myTitle}</Text>
+    <View>
+      <Image source={props.imageSrc} />
+      <Text style={styles.text}>ImageDetail {props.myTitle}</Text>
+      <Text style={styles.text}>Image score is {props.imageScore}</Text>
+    </View>
+    
   )
 }
 
 const styles = StyleSheet.create({
     text: {
         fontSize: 22,
+        margin:6,
     },
 })
 
