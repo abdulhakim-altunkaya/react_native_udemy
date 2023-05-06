@@ -6,6 +6,7 @@ import ListItems from "./src/screens/ListItems";
 import ListItems5 from "./src/screens/ListItems5";
 import InitialScreen from "./src/screens/InitialScreen";
 import InitialScreen2 from "./src/screens/InitialScreen2";
+import ImageScreen from "./src/screens/ImageScreen";
 
 const navigator = createStackNavigator(
   {
@@ -15,6 +16,7 @@ const navigator = createStackNavigator(
     List5: ListItems5,
     Initial: InitialScreen,
     Initial2: InitialScreen2,
+    ImageScreen: ImageScreen,
   },
   {
     initialRouteName: "Initial2",

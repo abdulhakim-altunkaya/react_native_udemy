@@ -10,6 +10,9 @@ function InitialScreen({navigation}) {
   const changeRoute2 = () => {
     navigation.navigate("List5");
   }
+  const changeRoute3 = () => {
+    navigation.navigate("ImageScreen");
+  }
   return (
     <View>
         <Text style={styles.text}>
@@ -23,7 +26,10 @@ function InitialScreen({navigation}) {
           title="GO TO LIST PAGE"
           onPress={()=> {changeRoute2()}}
         />
-
+        <Button
+          title='GO TO IMAGE SCREEN'
+          onPress={() => {changeRoute3()}}
+        />
     </View>
   )
 }
