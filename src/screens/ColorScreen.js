@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, Button} from 'react-native';
 
 function ColorScreen() {
     let[colorBoxes, setColorBoxes] = useState([
-        "rgb(0,255,0)", "rgb(0,255,200)"
+        "rgb(0,255,0)",
     ])
     
     const addColorBox = () => {
@@ -11,7 +11,7 @@ function ColorScreen() {
         let num2 = Math.floor(Math.random() * (255 - 0 + 1) + 0);
         let num3 = Math.floor(Math.random() * (255 - 0 + 1) + 0);
         console.log(colorBoxes);
-        setColorBoxes(colorBoxes.push(`rgb(${num1}, ${num2}, ${num3})`)  )
+        setColorBoxes(colorBoxes => [...colorBoxes, `rgb(${num1}, ${num2}, ${num3})`])
     }
     return (
         <View>
