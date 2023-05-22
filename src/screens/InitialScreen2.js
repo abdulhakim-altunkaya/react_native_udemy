@@ -19,6 +19,9 @@ function InitialScreen({navigation}) {
   const changeRoute5 = () => {
     navigation.navigate("ColorScreen");
   }
+  const changeRoute6 = () => {
+    navigation.navigate("ColorScreen1");
+  }
   return (
     <View>
         <Text style={styles.text}>
@@ -39,6 +42,10 @@ function InitialScreen({navigation}) {
         <Button
           title='GO TO COUNTER SCREEN'
           onPress={() => {changeRoute4()}}
+        />
+        <Button
+          title='GO TO COLOR SCREEN FIRST VERSION'
+          onPress={() => {changeRoute6()}}
         />
         <Button
           title='GO TO COLOR SCREEN'
