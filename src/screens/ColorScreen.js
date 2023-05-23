@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, Button} from 'react-native';
+import { Text, View, StyleSheet, Button, FlatList} from 'react-native';
 
 function ColorScreen() {
 
@@ -21,15 +21,17 @@ function ColorScreen() {
 
             <FlatList
                 data={colors}
-                renderItem={({item}) =>{
-                    
-                    <View                         
-                    style={{
-                        height: 100,
-                        width: 100,
-                        backgroundColor: item
-                    }}
-                    ></View>               
+                renderItem={({item}) => {
+                    return (
+                        <View                         
+                        style={{
+                            height: 100,
+                            width: 100,
+                            backgroundColor: item
+                        }}
+                        />  
+                    )
+             
                 }}
             />
 
