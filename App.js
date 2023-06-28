@@ -13,6 +13,7 @@ import ColorScreen from "./src/screens/ColorScreen";
 import ColorScreen1 from "./src/screens/ColorScreen1";
 import ColorAdjust from "./src/screens/ColorAdjust";
 import NewComponents from "./src/screens/NewComponents";
+import NewList from "./src/screens/NewList";
 
 const navigator = createStackNavigator(
   {
@@ -29,6 +30,7 @@ const navigator = createStackNavigator(
     ColorScreen: ColorScreen,
     ColorScreen1: ColorScreen1,
     ColorAdjust: ColorAdjust,
+    NewListRoute: NewList,
   },
   {
     initialRouteName: "Initial2",
