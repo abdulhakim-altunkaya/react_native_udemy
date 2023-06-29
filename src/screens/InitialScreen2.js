@@ -73,6 +73,10 @@ function InitialScreen({navigation}) {
           title='GO TO NEW_LIST'
           onPress={() => {changeRoute9("NewListRoute")}}
         />
+        <Button
+          title='GO TO NEW_COMPONENTS'
+          onPress={() => {changeRoute9("NewScreens")}}
+        />
     </View>
   )
 }
