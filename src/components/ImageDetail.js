@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         margin:6,
     },
+    
 })
 
 export default ImageDetail;
