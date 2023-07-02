@@ -28,6 +28,11 @@ function NewButton(props) {
                 onPress={() => {changeRoute("NewImages")}}>
                 <Text style={styles.textStyle1}>New Images</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.buttonContainer}
+                onPress={() => {changeRoute("Counter")}}>
+                <Text style={styles.textStyle1}>COUNTER</Text>
+            </TouchableOpacity>
         </View>
     )
 }
