@@ -17,6 +17,7 @@ import NewList from "./src/screens/NewList";
 import NewButton from "./src/screens/NewButton";
 import NewImg from "./src/screens/NewImg";
 import NewCounter from "./src/screens/NewCounter";
+import NewColor from "./src/screens/NewColor";
 
 const navigator = createStackNavigator(
   {
@@ -37,6 +38,7 @@ const navigator = createStackNavigator(
     NewScreens: NewButton,
     NewImages: NewImg,
     Counter: NewCounter,
+    Colors: NewColor,
   },
   {
     initialRouteName: "Initial2",
