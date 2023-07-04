@@ -9,15 +9,8 @@ function NewColor() {
         let num1 = Math.floor(Math.random() * 256);
         let num2 = Math.floor(Math.random() * 256);
         let num3 = Math.floor(Math.random() * 256);
-      setColorArray([...colorArray, `rgb(${num1}, ${num2}, ${num3})`]);
+        setColorArray([...colorArray, `rgb(${num1}, ${num2}, ${num3})`]);
     }
-
-    function getRandomInt(min, max) {
-        // min is inclusive, max is exclusive
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-      }
 
     return (
         <View style={styles.boxContainer}>
@@ -28,6 +21,7 @@ function NewColor() {
             <Text>{colorArray}</Text>
             <FlatList 
                 data={colorArray}
+                keyExtractor={item => item}
                 renderItem={({item}) => {
                     return(
                         <View style={{

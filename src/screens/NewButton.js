@@ -38,6 +38,11 @@ function NewButton(props) {
                 onPress={() => {changeRoute("Colors")}}>
                 <Text style={styles.textStyle1}>COLORS</Text>
             </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.buttonContainer}
+                onPress={() => {changeRoute("ColorsAdjust")}}>
+                <Text style={styles.textStyle1}>COLOR ADJUSTER</Text>
+            </TouchableOpacity>
         </View>
     )
 }
