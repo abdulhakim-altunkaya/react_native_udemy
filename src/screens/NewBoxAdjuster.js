@@ -1,21 +1,16 @@
 import React, { useState } from "react";
 import { Text, StyleSheet, View, FlatList, Button, TouchableOpacity } from "react-native";
 
-function NewBoxColor({ increaseValue, decreaseValue}) {
-
-
-    const addColor = () => {
-        console.log("wefwef")
-    }
+function NewBoxColor({ increaseValue, decreaseValue, colorName}) {
 
     return (
         <View style={{marginBottom: 10}}>
 
             <TouchableOpacity style={styles.buttonStyle} onPress={increaseValue}>
-                <Text style={styles.textStyle1}>MORE</Text>
+                <Text style={styles.textStyle1}>MORE {colorName}</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.buttonStyle} onPress={decreaseValue}>
-                <Text style={styles.textStyle1}>LESS</Text>
+                <Text style={styles.textStyle1}>LESS {colorName}</Text>
             </TouchableOpacity>
 
         </View>

@@ -5,35 +5,69 @@ import NewBoxAdjuster from "./NewBoxAdjuster";
 function NewBoxColor() {
 
     let [color1, setColor1] = useState(100);
-    let [color2, setColor2] = useState(100);
-    let [color3, setColor3] = useState(100);
+    let [color2, setColor2] = useState(50);
+    let [color3, setColor3] = useState(200);
     
+    const boxColor = `rgb(${color1}, ${color2}, ${color3})`;
+
     const incValue = (n) => {
         if(n == 1) {
-            setColor1((prevColor1) => prevColor1 + 1);
+            if(color1+10 > 255) {
+                alert("red value max can be 255");
+                return;
+            } 
+            setColor1((prevColor1) => prevColor1 + 10);
         } else if (n == 2) {
-            setColor2((prevColor2) => prevColor2 + 1);
+            if(color2+10 > 255) {
+                alert("green value max can be 255");
+                return;
+            } 
+            setColor2((prevColor2) => prevColor2 + 10);
         } else {
-            setColor3((prevColor3) => prevColor3 + 1);
+            if(color3+10 > 255) {
+                alert("blue value max can be 255");
+                return;
+            } 
+            setColor3((prevColor3) => prevColor3 + 10);
         }
     }
 
     const decValue = (n) => {
         if(n == 1) {
-            setColor1((prevColor1) => prevColor1 - 1);
+            if(color1-10 < 0) {
+                alert("red value min can be 0");
+                return;
+            } 
+            setColor1((prevColor1) => prevColor1 - 10);
         } else if (n == 2) {
-            setColor2((prevColor2) => prevColor2 - 1);
+            if(color2-10 < 0) {
+                alert("green value min can be 0");
+                return;
+            } 
+            setColor2((prevColor2) => prevColor2 - 10);
         } else {
-            setColor3((prevColor3) => prevColor3 - 1);
+            if(color3-10 < 0) {
+                alert("blue value min can be 0");
+                return;
+            } 
+            setColor3((prevColor3) => prevColor3 - 10);
         }
     }
 
     return (
         <View style={styles.boxContainer}>
-            <NewBoxAdjuster increaseValue={() => incValue(1)} decreaseValue={() => decValue(1)}/>
-            <Text>{`${color1}, ${color2}, ${color3},`}</Text>
-            <NewBoxAdjuster increaseValue={() => incValue(2)} decreaseValue={() => decValue(2)}/>
-            <NewBoxAdjuster increaseValue={() => incValue(3)} decreaseValue={() => decValue(3)}/>
+            <Text>{`Box color is: rgb(${color1}, ${color2}, ${color3})`}</Text>
+            <br />
+
+            <NewBoxAdjuster increaseValue={() => incValue(1)} decreaseValue={() => decValue(1)} colorName="Red"/>
+            <NewBoxAdjuster increaseValue={() => incValue(2)} decreaseValue={() => decValue(2)} colorName="Green"/>
+            <NewBoxAdjuster increaseValue={() => incValue(3)} decreaseValue={() => decValue(3)} colorName="Blue"/>
+            <View style={{
+                marginBottom: 5,
+                width: 100,
+                height: 100,
+                borderWidth: 3,
+                backgroundColor:boxColor}}></View>
         </View>
     )
 }
