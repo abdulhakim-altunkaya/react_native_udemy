@@ -19,6 +19,7 @@ import NewImg from "./src/screens/NewImg";
 import NewCounter from "./src/screens/NewCounter";
 import NewColor from "./src/screens/NewColor";
 import NewBoxColor from "./src/screens/NewBoxColor";
+import NewReducer from "./src/screens/NewReducer";
 
 const navigator = createStackNavigator(
   {
@@ -41,6 +42,7 @@ const navigator = createStackNavigator(
     Counter: NewCounter,
     Colors: NewColor,
     ColorsAdjust: NewBoxColor,
+    Reduce: NewReducer,
     
   },
   {
