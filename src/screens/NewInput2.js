@@ -26,6 +26,8 @@ function NewInput2() {
             <TextInput 
                 style={styles.inputStyle}
                 onChangeText={handleInput}
+                autoCapitalize="none" //ONLY FOR IOS
+                autoCorrect={false} //ONLY FOR IOS
             />
             <Text style={styles.textStyle2}>{state.inputValue}</Text>
         </View>
