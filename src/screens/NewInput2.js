@@ -1,19 +1,35 @@
 import React, { useState, useReducer} from "react";
 import { Text, TextInput, StyleSheet, View, FlatList, Button, TouchableOpacity } from "react-native";
 
+const initialState = {
+    inputValue: "input output with Reducer",
+}
 
-function NewInput() {
-    let [inputValue, setInputValue] = useState("Input output");
-  return (
-    <View style={styles.boxContainer}>
-        <Text style={styles.textStyle2}>INPUT COMPONENT</Text>
-        <TextInput 
-            style={styles.inputStyle}
-            onChangeText={(text) => setInputValue(text)}
-        />
-        <Text style={styles.textStyle2}>{inputValue}</Text>
-    </View>
-  )
+const reducer = (state, action) => {
+  switch (action.type) {
+    case "UPDATE_TEXT":
+        return {...state, inputValue:action.payload}
+    default:
+        return state
+  }
+}
+
+function NewInput2() {
+    const [state, dispatch] = useReducer(reducer, initialState);
+    const handleInput = (text) => {
+        dispatch({type: "UPDATE_TEXT", payload: text});
+    }
+
+    return (
+        <View style={styles.boxContainer}>
+            <Text style={styles.textStyle2}>INPUT COMPONENT</Text>
+            <TextInput 
+                style={styles.inputStyle}
+                onChangeText={handleInput}
+            />
+            <Text style={styles.textStyle2}>{state.inputValue}</Text>
+        </View>
+    )
 }
 const styles = StyleSheet.create({
     textStyle1: {
@@ -57,4 +73,4 @@ const styles = StyleSheet.create({
         borderColor: 'gray', 
         borderWidth: 1 },
 })
-export default NewInput
+export default NewInput2

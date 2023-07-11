@@ -21,6 +21,7 @@ import NewColor from "./src/screens/NewColor";
 import NewBoxColor from "./src/screens/NewBoxColor";
 import NewReducer from "./src/screens/NewReducer";
 import NewInput from "./src/screens/NewInput";
+import NewInput2 from "./src/screens/NewInput2";
 
 const navigator = createStackNavigator(
   {
@@ -45,6 +46,7 @@ const navigator = createStackNavigator(
     ColorsAdjust: NewBoxColor,
     Reduce: NewReducer,
     Input: NewInput,
+    Input2: NewInput2,
   },
   {
     initialRouteName: "Initial2",

@@ -51,7 +51,12 @@ function NewButton(props) {
             <TouchableOpacity
                 style={styles.buttonContainer}
                 onPress={() => {changeRoute("Input")}}>
-                <Text style={styles.textStyle1}>Input</Text>
+                <Text style={styles.textStyle1}>Input - useState</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+                style={styles.buttonContainer2}
+                onPress={() => {changeRoute("Input2")}}>
+                <Text style={styles.textStyle1}>Input - useReducer</Text>
             </TouchableOpacity>
         </View>
     )
