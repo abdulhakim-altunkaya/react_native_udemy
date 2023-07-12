@@ -1,27 +1,16 @@
-import React, { useState, useReducer} from "react";
-import { Text, TextInput, StyleSheet, View, FlatList, Button, TouchableOpacity } from "react-native";
+import React, {useReducer} from "react";
+import { Text, StyleSheet, View, FlatList, Button, TouchableOpacity } from "react-native";
 
-
-function NewInput() {
-    let [inputValue, setInputValue] = useState("Input output");
-
-
+function XBoxScreen() {
   return (
     <View style={styles.boxContainer}>
-        <Text style={styles.textStyle2}>INPUT COMPONENT</Text>
-        <TextInput 
-            style={styles.inputStyle}
-            onChangeText={(text) => setInputValue(text)}
-            autoCapitalize="none" //ONLY FOR IOS
-            autoCorrect={false} //ONLY FOR IOS
-        />
-        {inputValue.length < 5 ? <Text>Invalid Password length</Text> : 
-        inputValue ==="werwer" ? <Text>Congratulations</Text> : 
-        <Text>Invalid Password</Text>} 
-
+        <Text style={styles.textStyle2}>Child 1</Text>
+        <Text style={styles.textStyle2}>Child 2</Text>
+        <Text style={styles.textStyle2}>Child 3</Text>
     </View>
   )
 }
+
 const styles = StyleSheet.create({
     textStyle1: {
         fontFamily: "Trebuchet MS",
@@ -57,10 +46,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         borderColor: "#000000",
         borderWidth: 2,
-    },
-    inputStyle: { 
-        height: 40, 
-        borderColor: 'gray', 
-        borderWidth: 1 },
+    }
 })
-export default NewInput
+
+export default XBoxScreen

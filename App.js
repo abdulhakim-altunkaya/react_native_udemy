@@ -22,7 +22,7 @@ import NewBoxColor from "./src/screens/NewBoxColor";
 import NewReducer from "./src/screens/NewReducer";
 import NewInput from "./src/screens/NewInput";
 import NewInput2 from "./src/screens/NewInput2";
-
+import XBoxScreen from "./src/screens/XBoxScreen";
 const navigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -47,6 +47,7 @@ const navigator = createStackNavigator(
     Reduce: NewReducer,
     Input: NewInput,
     Input2: NewInput2,
+    CSSBox: XBoxScreen,
   },
   {
     initialRouteName: "Initial2",
